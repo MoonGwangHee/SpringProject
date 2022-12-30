@@ -785,3 +785,13 @@ INSERT INTO TBL_BOARD( title, content, name, read) VALUES ('제목1', '내용1',
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-12-29 16:02:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL" not found; SQL statement:
+INSERT INTO tbl-board (title, content, name)
+        VALUES
+        (?, ?, ?); [42102-200]
+2022-12-29 16:03:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL" not found; SQL statement:
+INSERT INTO tbl-board (title, content, name)
+        VALUES
+        (?, ?, ?); [42102-200]

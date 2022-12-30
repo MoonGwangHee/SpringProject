@@ -10,9 +10,30 @@
 <body>
 <div class="container">
   <p>글번호 : [[${halo.boardId}]]</p>
-  <p>제목 : [[${halo.title}]]</p>
+  <p id="title">제목 : [[${halo.title}]]</p>
   <p>작성자 : [[${halo.name}]]</p>
-  내용 : <textarea class="form-control" th:text="${halo.content}"></textarea>
+  내용 :
+    <div id="content">
+        <textarea readonly="readonly"
+                  class="form-control"
+                  th:text="${halo.content}">
+
+        </textarea>
+    </div>
+    <form th:action="@{update}" method="get">
+        <input type="hidden" name="boardId" th:value="${halo.boardId}">
+        <button type="submit">수정</button>
+    </form>
+
+    <form th:action="@{delete}" method="get">
+        <input type="hidden" name="boardId" th:value="${halo.boardId}">
+        <button type="submit">삭제</button>
+    </form>
+
+    <form th:action="@{main}" method="get">
+        <button type="submit">홈</button>
+    </form>
+
 </div>
 </body>
 </html>

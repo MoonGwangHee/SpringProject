@@ -13,5 +13,10 @@ public interface BoardMapper {
 
     Board getBoard(Long boardId);
 
+    void uploadBoard(Board board);
+
+    Object updateBoard(Board board);
+
+    void deleteBoard(Long boardId);
 
 }
